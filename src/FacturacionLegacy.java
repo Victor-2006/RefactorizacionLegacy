@@ -8,11 +8,16 @@
  * @param esSocioVip Indica si el cliente es socio VIP.
  * @return El importe total después de aplicar los descuentos correspondientes.
  */
+
 public class FacturacionLegacy {
     private static final double DESCUENTO_VIP = 0.25;
     private static final double DESCUENTO_ESTANDAR = 0.15;
     private static final double DESCUENTO_CLIENTE_TIPO2 = 0.05;
+
     // Método a refactorizar
+    public double cT(double m, int tC, boolean dV) {
+        return calcularTotal(m, tC, dV);
+    }
     public double calcularTotal(double importeBase, int tipoCliente, boolean esSocioVip) {
         if (importeBase <= 0) {
             return 0;
