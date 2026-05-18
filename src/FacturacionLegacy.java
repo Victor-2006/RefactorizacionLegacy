@@ -12,7 +12,7 @@ public class FacturacionLegacy {
             return 0;
         }
         if (tipoCliente == 1) {
-            
+
             if (esSocioVip) {
                 return importeBase - (importeBase * DESCUENTO_VIP);
                         }
