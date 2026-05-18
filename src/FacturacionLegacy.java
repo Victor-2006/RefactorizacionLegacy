@@ -5,18 +5,18 @@
 public class FacturacionLegacy {
 
     // Método a refactorizar
-    public double cT(double m, int tC, boolean dV) {
-        if (m > 0) {
-            if (tC == 1) {
-                if (dV == true)
-                    return m - (m * 0.25);
+    public double calcularTotal(double importe, int tipoCliente, boolean clienteVip) {
+        if (importe > 0) {
+            if (tipoCliente == 1) {
+                if (clienteVip == true)
+                    return importe - (importe * 0.25);
                 else
-                    return m - (m * 0.15);
+                    return importe - (importe * 0.15);
             } else {
-                if (tC == 2) {
-                    return m - (m * 0.05);
+                if (tipoCliente == 2) {
+                    return importe - (importe * 0.05);
                 } else {
-                    return m;
+                    return importe;
                 }
             }
         } else {
