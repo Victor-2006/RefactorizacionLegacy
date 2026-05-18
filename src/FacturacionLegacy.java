@@ -1,6 +1,12 @@
 /**
  * Clase Legacy del sistema de facturación.
  * ADVERTENCIA: Código con alta deuda técnica. No modificar la firma del método.
+ *
+ * Calcula el importe final aplicando descuentos según el tipo de cliente y si es socio VIP.
+ *  @param importeBase El importe base de la factura.
+ *  @param tipoCliente El tipo de cliente (1 o 2).
+ * @param esSocioVip Indica si el cliente es socio VIP.
+ * @return El importe total después de aplicar los descuentos correspondientes.
  */
 public class FacturacionLegacy {
     private static final double DESCUENTO_VIP = 0.25;
