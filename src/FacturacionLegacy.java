@@ -14,10 +14,10 @@ public class FacturacionLegacy {
     private static final double DESCUENTO_ESTANDAR = 0.15;
     private static final double DESCUENTO_CLIENTE_TIPO2 = 0.05;
 
-    // Método a refactorizar
     public double cT(double m, int tC, boolean dV) {
         return calcularTotal(m, tC, dV);
     }
+    // Método a refactorizar
     public double calcularTotal(double importeBase, int tipoCliente, boolean esSocioVip) {
         if (importeBase <= 0) {
             return 0;
