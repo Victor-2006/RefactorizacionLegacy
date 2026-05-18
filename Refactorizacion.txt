@@ -1,0 +1,20 @@
+Oler el código (Code Smells). El Copiloto anotará en un bloc de notas los tres grandes problemas de este código:
+
+
+Números mágicos. ¿Qué significa 0.25 o 0.15? Son valores hardcodeados sin contexto. Si mañana el IVA o el descuento cambian, ¿dónde los buscamos?
+El problema es que no se indica que significa, no sabemos si son descuentos, impuestos, comisiones...
+Esto dificulta el mantenimiento, futuras modificaciones y la forma de entender el código.
+
+
+Variables sin significado. Nombres como cT, m, tC o dV no aportan ninguna semántica. Nos obligan a adivinar.
+cT= calcularTotal, m= importe, tC= tipoCliente, dV= esClienteVip
+
+
+Código Spaghetti. La anidación de múltiples if-else crea una estructura en forma de flecha > que hace casi imposible seguir el flujo lógico de ejecución.
+El código contiene multiples if-else, esto provoca complejidad a la hora de seguir la lógica del código, cuesta mas mantenerlo, hay mas riesgo de que algo falle
+
+
+REDACCION DE LOS CAMBIOS:
+- Hemos eliminado los numeros seleccionando 0.15 y 0.25 y le hemos dado nombres mas explicativos: 0.25 es DESCUENTO_VIP y 0.15  es DESCUENTO_ESTANDAR.
+- Vamos a sustituir todos los if-else por un solo if-return, en vez de usar if-else-return, usamos if-retun, if-return...
+- Hemos añadido método original y el refactorizado
