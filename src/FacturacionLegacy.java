@@ -30,5 +30,5 @@ public class FacturacionLegacy {
                     return importeBase - (importeBase * DESCUENTO_CLIENTE_TIPO2);
                     }
                     return importeBase;
- 
+    }
 }
